@@ -1,0 +1,23 @@
+<div class="container">
+    <form>
+        <legend>Employ</legend>
+
+        <div class="form-group">
+            <span>User Name</span>
+            <input type="text" class="form-control" id="user" [(ngModel)]="object.email" name="user">
+        </div>
+
+        <div class="form-group">
+            <span>Password</span>
+            <input type="password" class="form-control" id="password" [(ngModel)]="object.password" name="password">
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-submit" (click)="onSubmit()">Log in</button>
+        </div>
+        <div class="form-group">
+            <p><b>No account ? </b><a routerLink="/register" class="register link">Register</a> <b> Or </b>
+                <a routerLink="/manager" class="login link">Login as manager </a>
+            </p>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,88 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../assets/images/pngtree-blue-linear-gradient-background-image_343453.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+form {
+    width: 500px;
+    text-align: center;
+}
+
+legend {
+    text-align: center;
+    font-weight: 600;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+
+    margin: 40px 0;
+}
+
+.form-group {
+    display: flex;
+    margin: 25px 10px;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.form-group span {
+    position: absolute;
+    left: 8px;
+    height: 100%;
+    font-size: 12px;
+    line-height: 36px;
+    transform-origin: left;
+    transition: transform 0.1s ease-in-out;
+    pointer-events: none;
+}
+
+.form-group.active span {
+    transform: scale(0.833) translateY(-10px);
+}
+
+.form-group input {
+    width: 100%;
+    height: 100%;
+    padding: 9px 8px 7px;
+    border: 0;
+    outline: 0;
+    color: black;
+}
+.form-group.active input {
+    padding: 14px 0 2px 8px;
+}
+
+.btn-group {
+    padding: 8px 40px;
+}
+.btn-group .btn-submit {
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 5px 9px;
+    color: white;
+    transition: 1s ease-in-out;
+    background-size: 200%;
+    background-image: linear-gradient(60deg, #48dbfb, #0abde3, #48dbfb);
+}
+.btn-group .btn-submit:hover {
+    background-position: right;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}

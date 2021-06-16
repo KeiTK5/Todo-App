@@ -1,10 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
 .grid {
     display: block;
     width: 100%;
@@ -17,9 +10,10 @@
 }
 
 .row {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
 }
 
 .col {
@@ -311,6 +305,3 @@
         max-width: 100%;
     }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

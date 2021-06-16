@@ -1,0 +1,129 @@
+<app-header></app-header>
+
+<div class="grid wide">
+    <div class="row">
+        <div class="col l-4">
+            <div class="row project">
+
+                <div class="col l-12 title">
+                    <h3>{{updateVariable ? 'Create Task': 'Update Task'}}</h3>
+                </div>
+
+                <div class="col l-12 table">
+
+                    <form #myForm="ngForm">
+                        <div class="form-control">
+                            <label class="form__title">Task Name</label>
+                            <input ngModel type="text" class="form__input" placeholder="Task Name"
+                                [(ngModel)]="obj.task" #task="ngModel" required minlength="4" name="task">
+
+                            <div *ngIf="task.touched && task.invalid" class="alert alert-danger">
+                                <div *ngIf="task.errors?.required" class="text-danger">task is required</div>
+                                <div *ngIf="task.errors?.minlength" class="text-danger">task should be minium 4
+                                    characters</div>
+                            </div>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="form__title">Description</label>
+                            <input ngModel type="text" class="form__input" placeholder="Description"
+                                [(ngModel)]="obj.description" #description="ngModel" required minlength="4"
+                                name="description">
+
+                            <div *ngIf="description.touched && description.invalid" class="alert alert-danger">
+                                <div *ngIf="description.errors?.required" class="text-danger">description is required
+                                </div>
+                                <div *ngIf="description.errors?.minlength" class="text-danger">description should be
+                                    minium 4
+                                    characters</div>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="form__title">Project</mat-label>
+                                <mat-select>
+                                    <mat-option>
+                                        Please Select
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-control">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="form__title">Assigned To</mat-label>
+                                <mat-select>
+                                    <mat-option>
+                                        Please Select
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-control">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="form__title">Priority</mat-label>
+                                <mat-select>
+                                    <mat-option>
+                                        Nomal
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-control">
+                            <mat-form-field appearance="fill">
+                                <mat-label class="form__title">Status</mat-label>
+                                <mat-select>
+                                    <!-- <mat-option *ngFor="let food of foods" [value]="food.value">
+                                        {{food.viewValue}}
+                                    </mat-option> -->
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="form-control btn">
+                            <button type="button" *ngIf="updateVariable; else elseBlock" class="btn btn-add col l-12"
+                                (click)="btnCreate(myForm)"> Create Project </button>
+                            <ng-template #elseBlock>
+                                <button type="button" #elseBlock class="btn btn-add col l-12"
+                                    (click)="btnUpdate(updateId, myForm)"> Update Project </button>
+                            </ng-template>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col l-8">
+            <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let data of data | 
+                paginate: { 
+                    itemsPerPage: 6, 
+                    currentPage: page, 
+                    totalItems: totalLength 
+                }" cdkDrag>
+                    <div class="employ-title">
+                        <span>Poster: </span>
+                        <h3 class="nameEmploy" #employ>{{data.employ}}</h3>
+                    </div>
+                    <div class="employ-title">
+                        <span>Task: </span>
+                        <p class="task" #task>{{data.task}}</p>
+                    </div>
+                    <div class="employ-title">
+                        <span>Description: </span>
+                        <p class="task" #task>{{data.description}}</p>
+                    </div>
+                    <div class="employ-title">
+                        <span>Date Up: </span>
+                        <p>{{data.date}}</p>
+                    </div>
+                    <div class="employ-title">
+                        <p class="btn-action btn-finish" (click)="finish(data._id)">Finish</p>
+                        <p class="btn-action btn-editing" (click)="update(data._id ,data.task, data.description)">Edit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <pagination-controls class="page" (pageChange)="page = $event"></pagination-controls>
+        </div>
+    </div>
+
+</div>

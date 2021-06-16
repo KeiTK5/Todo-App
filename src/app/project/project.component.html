@@ -1,0 +1,127 @@
+<app-header></app-header>
+
+<div class="grid wide">
+    <div class="row project">
+
+        <div class="col l-9 title">
+            <h3>Project</h3>
+        </div>
+
+        <div class="col l-9 table">
+
+            <button type="button" class="btn btn-add" (click)="showModal()"><i class='bx bx-message-alt-add'></i> Create
+                Project </button>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <!-- <th>Project ID</th> -->
+                        <th>Project Name</th>
+                        <th>Date Of Start</th>
+                        <th>Team Size</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of projects | 
+                paginate: { 
+                    itemsPerPage: 5, 
+                    currentPage: page, 
+                    totalItems: totalLength 
+                }">
+                    <tr>
+                        <!-- <td>{{i + 1}}</td> -->
+                        <td>{{item.name}}</td>
+                        <td>{{item.date}}</td>
+                        <td>{{item.size}}</td>
+                        <td>
+                            <button type="button" class="btn btn-edit"><i class='bx bx-pencil'></i></button>
+                            <button type="button" class="btn btn-delete" (click)="btnDelete(item._id)"><i
+                                    class='bx bx-trash'></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls class="page" (pageChange)="page = $event"></pagination-controls>
+        </div>
+    </div>
+
+
+    <!-- modal add -->
+    <form #myForm="ngForm">
+        <div class="{{show ? 'overlay' : null}}">
+            <div class="modal {{show ? 'active' : null}}">
+                <div class="header-modal">
+                    <div class="title-modal">New Project</div>
+
+                    <div class="close-modal" (click)="showModal()">
+                        &times;
+                    </div>
+                </div>
+
+                <div class="body-modal">
+                    <!-- <div class="form-control">
+                        <label>Project ID</label>
+                        <input type="number" placeholder="Id">
+                    </div> -->
+                    <div class="form-control">
+                        <label>Project Name</label>
+                        <input type="text" placeholder="Project Name" [(ngModel)]="obj.name" name="name">
+                    </div>
+                    <!-- <div class="form-control">
+                        <label>Date Of Start</label>
+                        <input type="date">
+                    </div> -->
+                    <div class="form-control">
+                        <label>Team Size</label>
+                        <input type="text" placeholder="Team Size" [(ngModel)]="obj.size" name="size">
+                    </div>
+                </div>
+
+                <div class="footer-modal">
+                    <div class="form-control">
+                        <button class="btn btn-cancel" (click)="showModal()">Cancel</button>
+                        <button class="btn btn-save" (click)="btnCreate(myForm)">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- end modal -->
+
+    <!-- modal edit -->
+    <!-- <div class="{{editModal ? 'overlay' : null}}">
+        <div class="modal {{editModal ? 'active' : null}}">
+            <div class="header-modal">
+                <div class="title-modal">Edit Project</div>
+
+                <div class="close-modal" (click)="editShow()">
+                    &times;
+                </div>
+            </div>
+
+            <div class="body-modal">
+                <div class="form-control">
+                    <label>Project ID</label>
+                    <input type="number" placeholder="Id">
+                </div>
+                <div class="form-control">
+                    <label>Project Name</label>
+                    <input type="text" placeholder="Project Name">
+                </div>
+                <div class="form-control">
+                    <label>Team Size</label>
+                    <input type="number" placeholder="Team Size">
+                </div>
+            </div>
+
+            <div class="footer-modal">
+                <div class="form-control">
+                    <button class="btn btn-cancel" (click)="editShow()">Cancel</button>
+                    <button class="btn btn-save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- end modal -->
+
+</div>

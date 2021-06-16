@@ -1,0 +1,23 @@
+<div class="container">
+    <form>
+        <legend>Manager</legend>
+
+        <div class="form-group">
+            <span>User Name</span>
+            <input type="text" class="form-control" id="user" #user>
+        </div>
+
+        <div class="form-group">
+            <span>Password</span>
+            <input type="password" class="form-control" id="password" #password>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-submit" (click)="onSubmit(user.value, password.value)">Log in</button>
+        </div>
+        <div class="form-group">
+            <p><b>No account ? </b><a routerLink="/register" class="register link">Register</a> <b> Or </b>
+                <a routerLink="/employ" class="login link">Login as employ</a>
+            </p>
+        </div>
+    </form>
+</div>

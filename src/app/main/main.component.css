@@ -1,0 +1,305 @@
+/* You can add global styles to this file, and also import other style files */
+.grid {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row.wide {
+    width: 90%;
+    margin: 0 auto;
+}
+.col {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.l-0 {
+    display: none;
+}
+
+.l-1,
+.l-2,
+.l-2-4,
+.l-3,
+.l-4,
+.l-5,
+.l-6,
+.l-7,
+.l-8,
+.l-9,
+.l-10,
+.l-11,
+.l-12 {
+    display: block;
+}
+
+.l-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+}
+
+.l-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+}
+
+.l-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.l-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.l-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+.l-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+
+.l-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.l-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+
+.l-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+
+.l-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.l-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+}
+
+.l-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+}
+
+.l-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.container {
+    margin-top: 60px;
+    padding: 20px 0;
+    background: #e0e0e0;
+}
+
+.container .dashboar {
+    width: 100%;
+}
+
+.container .dashboar .user {
+    font-weight: 600;
+    display: block;
+    border-radius: 7px;
+    height: 36px;
+    line-height: 2.3;
+    background: silver;
+    text-align: center;
+}
+
+.container .dashboar .user-image {
+    padding-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .dashboar .user-image img {
+    margin-bottom: 5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.container .dashboar .user-image .user-tech {
+    text-align: center;
+}
+
+.container .dashboar .user-image .user-tech .title-team {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.container .dashboar .staff {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.container .dashboar .staff .col {
+    background: white;
+    border-radius: 3px;
+    margin: 3px 0;
+    cursor: pointer;
+}
+.container .dashboar .staff .col p {
+    padding: 4px 0;
+}
+.container .dashboar .custom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.container .dashboar .custom .col {
+    background: white;
+    border-radius: 3px;
+    margin: 3px 0;
+    cursor: pointer;
+}
+
+.container .dashboar .custom .title-custom {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container .dashboar .btn-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.container .dashboar .btn-project button {
+    cursor: pointer;
+    padding: 3px 10px;
+    outline: none;
+    border: none;
+    -webkit-transition: 0.35s ease-in-out;
+    transition: 0.35s ease-in-out;
+}
+
+.container .dashboar .btn-project button:hover {
+    color: white;
+    background: black;
+}
+
+.container .dashboar .projects {
+    background: white;
+}
+
+.container .dashboar .projects .title-project {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+.container .dashboar .projects .title-project h3 {
+    padding: 10px 0;
+    border-radius: 3px;
+    background: #0c50ce;
+    margin: 20px 0;
+}
+
+.container .dashboar .projects .title-project .row {
+    color: black;
+    background: white;
+}
+
+.container .dashboar .projects .title-project .row .col h4 {
+    margin-top: 5px;
+}
+
+.container .dashboar .projects .title-project .row .col p {
+    margin-top: 8px;
+}
+
+.collapsible {
+    margin-top: 30px;
+}
+.collapsible > li {
+    font-size: 20px;
+    list-style: none;
+}
+.sub-menu {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.25s ease-in-out;
+    background: white;
+}
+.sub-menu > li {
+    list-style: none;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+.sub-menu.active {
+    height: 80px;
+    overflow: auto;
+}
+.dropdown {
+    padding: 5px 18px;
+    color: white;
+}
+.text__dropdown {
+    cursor: pointer;
+    background: #0c50ce;
+    margin: 16px 0;
+}
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+}
+.accordion {
+    margin-top: 30px;
+}
+.dropdown-title {
+    background: #0c50ce;
+    color: white;
+    padding: 5px 15px;
+    margin-top: 5px;
+    margin-right: 0;
+    font-weight: 600;
+}
+.member-group {
+    background: white;
+    padding: 5px 20px;
+}

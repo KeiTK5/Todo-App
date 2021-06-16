@@ -1,0 +1,26 @@
+<header>
+    <nav>
+        <ul>
+            <li><a routerLink="" class="nav__title">Quản lí dự án</a></li>
+            <li><a routerLink="" class="nav__title">Fpoly</a></li>
+            <li><a routerLink="/task" class="nav__content">Task</a></li>
+            <li><a routerLink="/project" class="nav__content">Dự án</a></li>
+        </ul>
+    </nav>
+    <div class="header__search">
+        <div class="header__search-block">
+            <div class="header__search-block--icon"><i class="fas fa-search"></i></div>
+            <div class="header__search-block--input"><input type="text" placeholder="Tìm kiếm"></div>
+            <div class="header__search-block--btn"><button class="btn btn-submit">Tìm</button></div>
+            <!-- <div class="header__search-block--logout" *ngIf="userName"><a routerLink="/" (click)="logout()">{{userName}}</a></div> -->
+            <div class="header__search-block--logout" *ngIf="userName">
+                <a id="dropdown">{{userName}}</a><i class='bx bxs-chevron-down'></i>
+                <ul id="dropdown-content">
+                    <li><a routerLink="">Profile</a></li>
+                    <li><a routerLink="/" (click)="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header>

@@ -1,0 +1,202 @@
+.grid {
+    margin-top: 50px;
+}
+
+.title {
+    margin: 0 auto;
+}
+.title h3 {
+    font-size: 30px;
+}
+
+.table {
+    margin: 30px auto;
+}
+
+.btn-add{
+    background: #0c50ce;
+    border: none;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+button {
+    background: transparent;
+    color: black;
+    font-weight: 600;
+    padding: 7px 18px;
+    border-radius: 3px;
+
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.bx{
+    margin-top: 3px;
+    font-size: 20px;
+}
+.bx-message-alt-add{
+    margin-right: 5px;
+}
+
+.table button:hover {
+    color: white;
+    background: black;
+}
+
+.table table {
+    margin: 20px auto;
+}
+.table table thead tr th {
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    max-width: 300px;
+}
+.table table tbody tr td {
+    text-align: center;
+    width: 400px;
+    height: 50px;
+}
+
+.table table tbody tr td .btn {
+    text-align: center;
+    padding: 8px 30px;
+}
+
+.btn + .btn {
+    margin-left: 2px;
+}
+.page{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* modal */
+
+.modal {
+    border: 1px solid black;
+    background: white;
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+
+    border-radius: 3px;
+    position: fixed;
+    visibility: hidden;
+    display: table;
+
+    transform: translateY(-230%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    transition: 0.35s ease-in-out;
+    animation: unfoldOut 0.5s ease-in-out;
+}
+.modal.active {
+    visibility: unset;
+    transform: translateY(30%);
+}
+
+.modal .header-modal {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+.modal .header-modal .title-modal {
+    flex: 1;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 26px;
+    padding: 15px 0;
+}
+.modal .header-modal .close-modal {
+    margin-right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    color: grey;
+}
+.modal .header-modal .close-modal:hover {
+    color: black;
+}
+
+.modal .body-modal {
+    margin-top: 40px;
+    border-bottom: 1px solid grey;
+}
+
+.modal .body-modal .form-control {
+    height: 50px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.modal .body-modal .form-control label {
+    flex: 0.3;
+    margin-left: 30px;
+}
+.modal .body-modal .form-control input {
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 3px;
+    flex: 0.6;
+}
+
+.modal .footer-modal .form-control {
+    margin: 5px 0;
+    margin-right: 30px;
+    float: right;
+}
+
+.modal .footer-modal .form-control .btn:hover {
+    background: black;
+}
+
+.modal .footer-modal .form-control .btn-cancel {
+    background: rgb(255, 148, 48);
+    margin-left: 5px;
+}
+
+input:checked ~ .overlay {
+    transition: 0.5s linear;
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    animation: fadeIn linear 0.3s;
+}
+
+@keyframes unfoldOut {
+    0% {
+        background: rgba(0, 0, 0, alpha);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(30%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

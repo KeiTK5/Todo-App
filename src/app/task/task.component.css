@@ -1,0 +1,283 @@
+.grid {
+    margin-top: 50px;
+}
+
+.title h3 {
+    font-size: 30px;
+}
+
+.table {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    height: auto;
+}
+
+button {
+    background: rgb(14, 93, 196);
+    color: white;
+    font-weight: 600;
+    padding: 7px 18px;
+    border-radius: 3px;
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.35s ease-in-out;
+}
+
+.table button:hover {
+    background: black;
+}
+
+.form-control {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+.form-control.btn {
+    margin-top: 25px;
+}
+.form__title {
+    flex: 1;
+    padding: 8px 0;
+    color: rgba(0, 4, 255, 0.8);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form__input {
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #dbdbdb;
+    outline: none;
+    border-radius: 3px;
+}
+
+.form__input:focus {
+    border: 1px solid rgba(114, 114, 114, 0.8);
+}
+
+.example-list {
+    margin: 43px 0;
+    border: solid 1px rgba(0, 0, 0, 0.4);
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.example-box {
+    width: 300px;
+    height: 150px;
+    margin: 10px 5px;
+    padding: 10px 10px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: white;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    font-weight: 600;
+}
+.employ-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.employ-title > h3 {
+    font-weight: 500;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.employ-title > span {
+    color: rgba(0, 4, 255, 0.8);
+    padding: 0;
+}
+
+.employ-title > p {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.btn-action{
+    color: rgba(0, 4, 255, 0.8);
+    margin: 0px 7px;
+    transition: .1 ease;
+}
+.btn-action:hover{
+    color: black;
+}
+
+.page{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text-danger{
+    color: red;
+    border: 1px solid red;
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* modal */
+
+.modal {
+    border: 1px solid black;
+    background: white;
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+
+    border-radius: 3px;
+    position: fixed;
+    visibility: hidden;
+    display: table;
+
+    transform: translateY(-230%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    transition: 0.35s ease-in-out;
+    animation: unfoldOut 0.5s ease-in-out;
+}
+.modal.active {
+    visibility: unset;
+    transform: translateY(30%);
+}
+
+.modal .header-modal {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+.modal .header-modal .title-modal {
+    flex: 1;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 26px;
+}
+.modal .header-modal .close-modal {
+    margin-right: 30px;
+    font-size: 24px;
+    cursor: pointer;
+    color: grey;
+}
+.modal .header-modal .close-modal:hover {
+    color: black;
+}
+
+.modal .body-modal {
+    margin-top: 40px;
+    border-bottom: 1px solid grey;
+}
+
+.modal .body-modal .form-control {
+    height: 50px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.modal .body-modal .form-control label {
+    flex: 0.3;
+    margin-left: 30px;
+}
+.modal .body-modal .form-control input {
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid grey;
+    border-radius: 3px;
+    flex: 0.6;
+}
+
+.modal .footer-modal .form-control {
+    margin: 5px 0;
+    margin-right: 30px;
+    float: right;
+}
+
+.modal .footer-modal .form-control .btn:hover {
+    background: black;
+}
+
+.modal .footer-modal .form-control .btn-cancel {
+    background: rgb(255, 148, 48);
+    margin-left: 5px;
+}
+
+input:checked ~ .overlay {
+    transition: 0.5s linear;
+    display: block;
+}
+.btn-delete {
+    background: rgba(255, 0, 0, 0.8);
+}
+.btn-edit {
+    background: rgba(1, 161, 253, 0.8);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    animation: fadeIn linear 0.3s;
+}
+
+@keyframes unfoldOut {
+    0% {
+        background: rgba(0, 0, 0, alpha);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(30%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
